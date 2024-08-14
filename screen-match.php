@@ -91,3 +91,14 @@ $filme = [
 // var_dump($filme['nome']);
 
 echo ($filme['nome']);
+
+// var_dump($notas);
+// sort($notas);
+// var_dump($notas);
+// echo min($notas);
+
+var_dump($filme['nome']);
+// var_dump(strpos($filme['nome'], "T"));
+$posicao = strpos($filme['nome'], "r");
+
+var_dump(substr($filme['nome'],2, $posicao));
