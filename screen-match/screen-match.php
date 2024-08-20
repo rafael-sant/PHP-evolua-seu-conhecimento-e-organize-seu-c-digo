@@ -1,24 +1,6 @@
 <?php 
 
-// \n Quebra de linha 
-// \t Tab 
-
-function exibeMensagemLancamento(int $ano): void {
-    if($ano >= 2022) { 
-        echo "Esse filme é um lançamento \n"; 
-    
-    } elseif($ano >= 2020 && $ano <= 2022) { 
-        echo "Esse filme ainda é novo \n"; 
-    
-    } else { 
-        echo "Esse não é um lançamento \n"; 
-    }
-};
-
-function incluidoNoPlano(bool $plano, int $ano): bool {
-    return $plano || $ano < 2020;
-}
-
+require __DIR__ . "/funcoes.php";
 
 echo "Bem vindo ao sreen match \n";
 
@@ -102,3 +84,9 @@ var_dump($filme['nome']);
 $posicao = strpos($filme['nome'], "r");
 
 var_dump(substr($filme['nome'],2, $posicao));
+
+echo json_encode($filme);
+
+$filmeComoStringJSON = json_encode($filme);    
+
+file_put_contents(__DIR__ . '/filme.json', $filmeComoStringJSON);
