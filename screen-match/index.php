@@ -1,6 +1,6 @@
 <?php 
 
-require __DIR__ . "/funcoes.php";
+include __DIR__ . "/src/funcoes.php";
 
 echo "Bem vindo ao sreen match \n";
 
@@ -63,24 +63,24 @@ exibeMensagemLancamento($anoLancamento);
 //     "Super Herói"
 // ];
 
-$filme = [
-    "nome" => "Thor",
-    "ano" => 2021, 
-    "nota" => 7.7, 
-    "genero" => "Super Herói"
-];
+$filme = criaFilme(
+    "Thor", 
+    2021, 
+    7.7, 
+    "Super Herói",
+);
 
 // var_dump($filme['nome']);
 
-echo ($filme['nome']);
+// echo $filme['nome'];
 
-// var_dump($notas);
-// sort($notas);
-// var_dump($notas);
-// echo min($notas);
+var_dump($notas);
+sort($notas);
+var_dump($notas);
+echo min($notas);
 
 var_dump($filme['nome']);
-// var_dump(strpos($filme['nome'], "T"));
+var_dump(strpos($filme['nome'], "T"));
 $posicao = strpos($filme['nome'], "r");
 
 var_dump(substr($filme['nome'],2, $posicao));

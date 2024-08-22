@@ -15,3 +15,12 @@ function exibeMensagemLancamento(int $ano): void {
 function incluidoNoPlano(bool $plano, int $ano): bool {
     return $plano || $ano < 2020;
 };
+
+function criaFilme(string $nome,  int $anoLançamento, float $nota, string $genero ): array {
+        return [
+            'nome' => $nome,
+            'ano' => $anoLançamento,
+            'nota' => $nota,
+            'genero' => $genero,
+        ];
+};
